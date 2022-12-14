@@ -4,46 +4,57 @@ import java.util.Scanner;
 
 public class RevOfString {
 
-	public static void main(String[] args) {
-		//System.out.print("enter string: ");
-		Scanner sc = new Scanner(System.in);
-		/*String str=sc.nextLine();
-		
-		char[]s=new char[str.length()];
-		int temp = 0;
-		
-		for(int i=str.length()-1;i>=0;i--) {
-			s[temp]=str.charAt(i);
-			temp++;
-		}
-		System.out.println(  s);
-		
-		System.out.println("Reverse a Sentence");
-		
-		System.out.print("enter sentence: ");
+	public static void revOfWord(String s) {
 
-		String sen=sc.nextLine();
-		String revSen=" ";
-		
-		for(int i=sen.length()-1;i>=0;i--) {
-			if(sen.charAt(i)!=' ') {
-			revSen=revSen+sen.charAt(i);
+		String rev = " ";
+		for (int i = s.length() - 1; i >= 0; i--) {
+			rev = rev + s.charAt(i);
+		}
+		System.out.println("Reversed word: " + rev);
+	}
+
+	public static void revSentence(String sen) {
+
+		sen = sen + " ";
+		String revSen = "";
+		String word = "";
+		for (int i = 0; i < sen.length(); i++) {
+			if (sen.charAt(i) != ' ') {
+				word = word + sen.charAt(i);
+			} else {
+				revSen = word + " " + revSen;
+				word = "";
 			}
 		}
-		System.out.println(revSen);*/
-		
-		
-		System.out.println("reverse word by word");
-		System.out.print("enter a statement: ");
+		System.out.println(revSen);
 
-		String statement =sc.nextLine();
-		String r="";
-		for(int i=statement.length()-1;i>0;--i) {
-			r=r+(statement.charAt(i-1));
-			
+	}
+
+	static String revWordByWord(String str) {
+		String rw = "";
+
+		for (int i = str.length(); i > 0; --i) {
+			rw = rw + str.charAt(i - 1);
 		}
-		System.out.println(r);
-		
+		return rw;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		// System.out.print("Enter the word: ");
+		// String s = sc.next();
+
+		// System.out.print("Enter the sentence: ");
+		// String sen = sc.nextLine();
+
+		System.out.print("Enter the sentence: ");
+		String str = sc.nextLine();
+
+		// revOfWord(s);
+		// revSentence(sen);
+		System.out.println(revWordByWord(str));
 
 	}
 
