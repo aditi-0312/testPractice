@@ -1,6 +1,7 @@
 package collections.framework;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class HashMaps {
 
@@ -34,6 +35,13 @@ public class HashMaps {
 
 		ids.remove("Joe");
 		System.out.println(ids);
+		
+		
+		// Iterate the map using
+        // for-each loop
+        for (Entry<String, Integer> e : ids.entrySet())
+            System.out.println("Key: " + e.getKey()
+                               + " Value: " + e.getValue());
 	}
 
 }
