@@ -108,6 +108,7 @@ public class LinkedList1 {
 			prev=curr;
 			curr=next;
 		}
+		
 		print(prev);
 	}
 
